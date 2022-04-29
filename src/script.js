@@ -90,13 +90,18 @@ function age(userAnswer, currentYear, birthYear) {
 function larger(userAnswer, num1, num2) {
   // which of ${number4} and ${number5} is larger (if they're the same then pick that number)?
   // 300 pts
+  const isCorrect = userAnswer == num1 > num2;
 
-  
+  if (num1 > num2){
+    points += 300
+  }
+
+  return isCorrect
 }
 
 function getScore() {
   // returns the current user's quiz score score
-
+  return points
 }
 
 // DO NOT MODIFY CODE UNDER THIS COMMENT
