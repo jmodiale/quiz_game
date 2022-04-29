@@ -50,14 +50,14 @@ function firstThreeLetters(userAnswer, word) {
 function squared(userAnswer, number) {
   // what is <number> squared?
   // 200 pts
-  
+
   const isCorrect = userAnswer == number ** 2;
+  // OR const isCorrect = parseInt(userAnswer) === number ** 2;
 
   if (isCorrect) {
     points += 200;
   }
   return isCorrect;
-  
 }
 
 function multiplication(userAnswer, num1, num2) {
@@ -90,12 +90,18 @@ function age(userAnswer, currentYear, birthYear) {
 function larger(userAnswer, num1, num2) {
   // which of ${number4} and ${number5} is larger (if they're the same then pick that number)?
   // 300 pts
-  const isCorrect = userAnswer == num1 > num2;
+  let isCorrect;
 
   if (num1 > num2){
-    points += 300
+    isCorrect = userAnswer == num1;
+  } else {
+    isCorrect = userAnswer == num1;
   }
 
+  if (isCorrect){
+    points += 300
+  }
+  
   return isCorrect
 }
 
