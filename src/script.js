@@ -77,7 +77,7 @@ function age(userAnswer, currentYear, birthYear) {
   // if someone was born in <birthYear> and already has had their birthday this year, how old are they?
   // 300 pts
 
-  const number = currentYear * birthYear;
+  const number = currentYear - birthYear;
   const isCorrect = userAnswer == number;
 
   if (isCorrect) {
